@@ -22,8 +22,7 @@
 
 .est-2016 {
   position: fixed;
-  top: 12%;
-  right: 45.7%;
+  top: calc(12% + 50px);
   font-size: 1vw; /* Use vw unit for responsive font size */
   font-family: "Berthold Akzidenz Grotesk";
   display: inline-block;
@@ -49,20 +48,33 @@
   margin-right: 4%;
 }
 
+.wrapper {
+  display: flex;
+  justify-content: center;
+}
+
 .group-parent {
   position: relative;
   width: 100%;
   display: flex;
-  flex-direction: column; /* Adjust to column layout for responsiveness */
+  flex-direction: column;
   align-items: center;
-  justify-content: space-between;
   box-sizing: border-box;
-  text-align: center; /* Center text for responsiveness */
-  font-size: 1.2vw; /* Use vw unit for responsive font size */
+  text-align: center;
+  font-size: 1.2vw;
   color: #cecece;
   margin-left: 2%;
-
   font-family: "Berthold Akzidenz Grotesk";
+}
+
+.button {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: #000;
+  color: #fff;
+  text-decoration: none;
+  margin: 10px;
+  border-radius: 5px;
 }
 
 @media only screen and (min-width: 600px) {
@@ -80,9 +92,31 @@
 
 .background-video {
   position: fixed;
+  filter: blur(0.7px); /* Add a blur effect to the video */
   bottom: 0;
   right: 0;
-  width: 60%; /* Adjust the width as needed */
+  width: 80%; /* Adjust the width as needed */
   height: auto; /* Maintain aspect ratio */
   z-index: -1;
+}
+@media only screen and (max-width: 600px) {
+  /* styles for mobile devices */
+  body {
+    font-size: 16px;
+  }
+  .myriorama-parent {
+    font-size: 6vw;
+    position: fixed;
+    top: 60%;
+    left: 0;
+    transform: rotate(-90deg);
+    transform-origin: 0 0;
+  }
+  
+
+  .group-parent {
+    position: relative;
+    display: flex;
+    flex-direction: row; /* Change to row layout */
+  }
 }
