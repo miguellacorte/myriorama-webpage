@@ -76,7 +76,6 @@
   margin-left: 15vw;
   margin-top: 25px;
   margin-right: 20px;
-
 }
 
 @media only screen and (min-width: 600px) {
@@ -102,20 +101,46 @@
   height: auto; /* Maintain aspect ratio */
   z-index: -1;
 }
-@media only screen and (max-width: 600px) {
-  .background-video {
-    position: fixed;
-    filter: blur(0.7px); /* Add a blur effect to the video */
-    bottom: 0;
-    right: 0;
-    width: 80%; /* Adjust the width as needed */
-    height: auto; /* Maintain aspect ratio */
-    z-index: -1;
+@media only screen and (min-width: 600px) {
+  .group-parent {
+    flex-direction: row; /* Switch back to row layout for larger screens */
   }
-  /* styles for mobile devices */
+  .download-projects-dossier,
+  .get-in-touch {
+    font-family: "Myriorama", sans-serif;
+    width: auto; /* Reset width for larger screens */
+    max-width: none; /* Reset max-width for larger screens */
+    margin-left: 10px; /* Adjust left margin for spacing on larger screens */
+  }
+}
+
+/* Mobile styles (max-width: 600px) */
+@media only screen and (max-width: 600px) {
   body {
     font-size: 16px;
   }
+  .background-video {
+    position: fixed;
+    filter: blur(0.7px);
+    bottom: 0;
+    right: 0;
+    width: 80%;
+    height: auto;
+    z-index: -1;
+  }
+
+  .button {
+    font-family: "Berthold Akzidenz Grotesk";
+    font-size: 2.4vw !important;
+    display: inline-block;
+    padding: 12px 24px;
+    color: #fff;
+    text-decoration: none;
+    margin-left: 2vw !important;
+    margin-right: 7vw !important;
+    margin-top: 0px !important;
+  }
+
   .myriorama-parent {
     font-size: 6vw;
     position: fixed;
@@ -124,11 +149,11 @@
     transform: rotate(-90deg);
     transform-origin: 0 0;
   }
-  
 
   .group-parent {
     position: relative;
     display: flex;
-    flex-direction: row; /* Change to row layout */
+    flex-direction: row;
   }
 }
+
