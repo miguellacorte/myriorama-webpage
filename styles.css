@@ -86,6 +86,7 @@
   }
   .download-projects-dossier,
   .get-in-touch {
+    font-family: "Myriorama", sans-serif;
     width: auto; /* Reset width for larger screens */
     max-width: none; /* Reset max-width for larger screens */
     margin-left: 10px; /* Adjust left margin for spacing on larger screens */
@@ -102,6 +103,15 @@
   z-index: -1;
 }
 @media only screen and (max-width: 600px) {
+  .background-video {
+    position: fixed;
+    filter: blur(0.7px); /* Add a blur effect to the video */
+    bottom: 0;
+    right: 0;
+    width: 80%; /* Adjust the width as needed */
+    height: auto; /* Maintain aspect ratio */
+    z-index: -1;
+  }
   /* styles for mobile devices */
   body {
     font-size: 16px;
